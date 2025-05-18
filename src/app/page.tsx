@@ -13,6 +13,7 @@ import { TeamMemberCard } from "@/components/ui/cards/team-member/simple-team-me
 import { CaseStudyCard } from "@/components/ui/cards/case-study/case-study-card";
 import { SimplePartnerCard } from "@/components/ui/cards/partner/simple-partner-card";
 import { MailchimpForm } from "@/components/blocks/mailchimp-newsletter";
+import { EventWrapper } from "@/components/common/event-wrapper";
 
 export default function Home() {
 
@@ -228,6 +229,10 @@ export default function Home() {
                     <TeamMemberCard key={i} {...t} />
                 ))}
             </div>
+
+            <EventWrapper event="cta_click" params={{ location: 'hero' }}>
+                <button className="btn-primary">Contattaci ora</button>
+            </EventWrapper>
 
             <Section>
                 <div className="container mx-auto columns-3 ">
