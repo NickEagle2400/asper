@@ -25,12 +25,7 @@ export const TextImage = ({
     if (reverse) {
         return (
             <Section>
-                <Grid
-                    cols="grid-cols-1 md:grid-cols-2"
-                    className={reverse ? 'md:flex-row-reverse' : ''}
-                    align="center"
-                    gap="gap-x-16 gap-y-12"
-                >
+                <Grid className={`grid-cols-1 md:grid-cols-2 items-center gap-x-16 gap-y-12 ${reverse ? 'md:flex-row-reverse' : ''}`}>
                     <div className="order-2 md:order-1">
                         <Title as="h2" size={"2xl"} className="mb-4">
                             {title}
@@ -66,12 +61,7 @@ export const TextImage = ({
     else {
         return (
             <Section>
-                <Grid
-                    cols="grid-cols-1 md:grid-cols-2"
-                    className={reverse ? 'md:flex-row-reverse' : ''}
-                    align="center"
-                    gap="gap-x-16 gap-y-12"
-                >
+                <Grid className={`grid-cols-1 md:grid-cols-2 items-center gap-x-16 gap-y-12 ${reverse ? 'md:flex-row-reverse' : ''}`}>
                     <div>
                         <Image {...image} />
                     </div>

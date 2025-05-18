@@ -30,7 +30,7 @@ export const CenteredCTABanner = ({
                     {description}
                 </Paragraph>
             )}
-            <Flex direction='row' align='center' justify='center'>
+            <Flex className='flex-row wrap justify-center items-center'>
                 <Button href={cta.href} variant={cta.variant ?? 'secondary'} size="lg">
                     {cta.label}
                 </Button>
@@ -50,7 +50,7 @@ else{
                         {description}
                     </Paragraph>
                 )}
-                <Flex direction='row' align='center' justify='center'>
+                <Flex className='flex-row wrap justify-center items-center'>
                     <Button href={cta.href} variant={cta.variant ?? 'secondary'} size="lg">
                         {cta.label}
                     </Button>

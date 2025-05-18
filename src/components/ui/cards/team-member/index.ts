@@ -1,0 +1,1 @@
+export * from "./simple-team-member-card"
