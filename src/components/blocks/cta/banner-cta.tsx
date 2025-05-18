@@ -1,6 +1,5 @@
-import { Paragraph, Title } from '../ui';
-import { Container, Flex, Section } from '../layout';
-import { Button } from '../ui/button-link';
+import { Container, Flex, Section } from "@/components/layout";
+import { Button, Paragraph, Title } from "@/components/ui";
 
 export type CenteredCTABannerProps = {
     title: string;

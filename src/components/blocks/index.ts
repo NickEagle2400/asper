@@ -1,4 +1,4 @@
-export * from "./banner-cta"
+export * from "./cta/banner-cta"
 // export * from "./"
 // export * from "./"
 // export * from "./"

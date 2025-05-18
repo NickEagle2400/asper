@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button-link";
-import { DefaultPage, Divider, Paragraph, Title } from "@/components";
+import { DefaultPage, Divider, Image, Paragraph, Title } from "@/components";
 import { LucideAArrowDown } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { TabsList, TabsRoot, TabsContent, TabsTrigger } from "@/components/layout/tabs";
 import { TextImage } from "@/components/blocks/content/text-image";
-import { CenteredCTABanner } from "@/components/blocks/banner-cta";
+import { CenteredCTABanner } from "@/components/blocks/cta/banner-cta";
 import { FaqItem } from "@/components";
 import { TestimonialCard } from "@/components/ui/cards/testimonial/simple-testimonial-card";
 import { BlogCard } from "@/components/ui/cards/blog/simple-blog-card";
@@ -14,6 +14,8 @@ import { CaseStudyCard } from "@/components/ui/cards/case-study/case-study-card"
 import { SimplePartnerCard } from "@/components/ui/cards/partner/simple-partner-card";
 import { MailchimpForm } from "@/components/blocks/mailchimp-newsletter";
 import { EventWrapper } from "@/components/common/event-wrapper";
+import { StickyCallToAction } from "@/components/blocks/cta/sticky-cta";
+import { ParallaxItem } from "@/components/common/animatons/parallax";
 
 export default function Home() {
 
@@ -203,6 +205,8 @@ export default function Home() {
                 </TabsRoot>
             </Section>
 
+            <StickyCallToAction />
+
 
             <Section>
                 <div className="lg:w-1/2">
@@ -215,6 +219,24 @@ export default function Home() {
                     />
                 </div>
             </Section>
+
+            <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
+                <ParallaxItem speed={0.4} className="z-20">
+                    <h1 className="text-5xl font-bold text-black">Benvenuto</h1>
+                </ParallaxItem>
+                <ParallaxItem speed={0.30} className="absolute top-0 left-0 bottom-0 w-full">
+                        <Image
+                            image={{
+                                url:"/assets/images/segnaposto.jpg",
+                                alt:"sfondo",
+                                width:1920,
+                                height:1080
+                            }}
+                            
+                            className="w-full h-full object-cover -z-10 scale-115"
+                        />
+                </ParallaxItem>
+            </section>
 
             <div>
                 <MailchimpForm />
