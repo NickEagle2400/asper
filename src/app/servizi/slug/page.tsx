@@ -1,5 +1,7 @@
-export const Page = () =>{
+const Page = () =>{
     return(
         <></>
     )
 }
+
+export default Page
