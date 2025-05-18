@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button-link";
 import { DefaultPage, Divider, Paragraph, Title } from "@/components";
-import { ChevronRight, LucideAArrowDown } from "lucide-react";
+import { LucideAArrowDown } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { TabsList, TabsRoot, TabsContent, TabsTrigger } from "@/components/layout/tabs";
 import { TextImage } from "@/components/blocks/content/text-image";
@@ -12,7 +12,6 @@ import { ServiceCard } from "@/components/ui/cards/service/simple-service-card";
 import { TeamMemberCard } from "@/components/ui/cards/team-member/simple-team-member-card";
 import { CaseStudyCard } from "@/components/ui/cards/case-study/case-study-card";
 import { SimplePartnerCard } from "@/components/ui/cards/partner/simple-partner-card";
-import { Navbar } from "@/components/layout/navigation/navbar";
 
 export default function Home() {
 
