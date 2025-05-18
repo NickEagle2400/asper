@@ -12,6 +12,7 @@ import { ServiceCard } from "@/components/ui/cards/service/simple-service-card";
 import { TeamMemberCard } from "@/components/ui/cards/team-member/simple-team-member-card";
 import { CaseStudyCard } from "@/components/ui/cards/case-study/case-study-card";
 import { SimplePartnerCard } from "@/components/ui/cards/partner/simple-partner-card";
+import { MailchimpForm } from "@/components/blocks/mailchimp-newsletter";
 
 export default function Home() {
 
@@ -213,6 +214,10 @@ export default function Home() {
                     />
                 </div>
             </Section>
+
+            <div>
+                <MailchimpForm />
+            </div>
 
             <div className="container mx-auto py-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {services.map((s, i) => (

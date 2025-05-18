@@ -5,4 +5,7 @@ export * from './image';
 export * from './button-link';
 export * from './faq-item';
 export * from './breadcrumbs';
-export * from './typography/';
+export * from './google-maps'
+
+export * from './typography';
+export * from './cards';
