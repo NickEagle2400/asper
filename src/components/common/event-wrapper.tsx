@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 
 type EventWrapperProps = {
   event: string;
-  params?: Record<string, any>;
+  params?: Record<string, unknown>;
   children: ReactNode;
 };
 
