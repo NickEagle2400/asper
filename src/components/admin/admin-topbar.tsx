@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase/client';
 import { useRouter, usePathname } from 'next/navigation';
 import type { User } from '@supabase/supabase-js';
 import { Title } from '../ui';
+import Link from 'next/link';
 
 export const AdminTopbar = () => {
     const [user, setUser] = useState<User | null>(null);
@@ -39,8 +40,8 @@ export const AdminTopbar = () => {
                     <Title as="h2" size={"small"} className='text-white'>NLS STUDIO</Title>
                 </div>
                 <div className='flex flex-row items-center'>
-                    <a href="/admin" className="underline block bg-black hover:bg-zinc-800 py-2 px-4">Dashboard</a>
-                    <a href="/" className="underline block bg-black hover:bg-zinc-800 py-2 px-4">Torna al sito</a>
+                    <Link href="/admin" className="underline block bg-black hover:bg-zinc-800 py-2 px-4">Dashboard</Link>
+                    <Link href="/" className="underline block bg-black hover:bg-zinc-800 py-2 px-4">Torna al sito</Link>
                 </div>
             </div>
             <div className='flex flex-row items-center gap-1'>

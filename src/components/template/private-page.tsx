@@ -1,7 +1,5 @@
 import { AdminTopbar } from "../admin/admin-topbar";
-import { WhatsappButton } from "../blocks/whatsapp-button";
 import { PageTransition } from "../common/transitions/page-transition";
-import { Navbar } from "../layout/navigation/navbar";
 
 type DefaultPageProps = {
     children: React.ReactNode,
