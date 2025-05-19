@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { MobileMenu } from './mobile-menu';
+import Link from 'next/link';
 
 export const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -37,10 +38,11 @@ export const Navbar = () => {
         <nav className="flex justify-between items-center">
           <span className="font-bold text-lg">Logo</span>
           <ul className="hidden md:flex gap-6 text-sm text-gray-700">
-            <li><a href="#">Home</a></li>
+            <li><Link href="/">Home</Link></li>
             <li><a href="#">Servizi</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Contatti</a></li>
+            <li><Link href="/login">LOGIN</Link></li>
           </ul>
           <MobileMenu />
         </nav>
