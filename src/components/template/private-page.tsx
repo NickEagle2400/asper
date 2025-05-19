@@ -8,23 +8,17 @@ type DefaultPageProps = {
     className?: string;
 }
 
-export const DefaultPage = ({children, className = ''}:DefaultPageProps) => {
+export const PrivatePage = ({children, className = ''}:DefaultPageProps) => {
     return (
         <>
         <AdminTopbar />
             <main className={`relative h-full z-10 ${className}`}>
                 
-                <Navbar />
-
                 <PageTransition>
 
                     {children}
                     
                 </PageTransition>
-
-                <WhatsappButton 
-                        phoneNumber="+39"
-                    />
 
             </main>
         </>

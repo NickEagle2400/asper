@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase/client';
 import { DefaultPage } from '@/components';
 
@@ -8,12 +9,26 @@ export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [sent, setSent] = useState(false);
     const [errorMsg, setErrorMsg] = useState('');
+    const [checking, setChecking] = useState(true); // 🟡 Stato iniziale
+    const router = useRouter();
+
+    useEffect(() => {
+        const checkSession = async () => {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (user) {
+                router.replace('/admin');
+            } else {
+                setChecking(false); // mostra il form solo se non loggato
+            }
+        };
+        checkSession();
+    }, [router]);
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         setErrorMsg('');
-        const { data, error } = await supabase.auth.signInWithOtp({
-            email: email,
+        const { error } = await supabase.auth.signInWithOtp({
+            email,
             options: {
                 emailRedirectTo: `${window.location.origin}/auth/confirm`,
             },
@@ -21,6 +36,8 @@ export default function LoginPage() {
         if (!error) setSent(true);
         else setErrorMsg(error.message);
     };
+
+    if (checking) return null; // 👈 Nessun contenuto durante il controllo
 
     return (
         <DefaultPage>
